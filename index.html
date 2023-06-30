@@ -1,76 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Profit Calculator</title>
-    <style>
-      /* CSS styles for the calculator */
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-      }
-      .container {
-        max-width: 500px;
-        margin: auto;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      }
-      h1 {
-        text-align: center;
-        margin-top: 0;
-      }
-      label {
-        display: block;
-        margin-bottom: 5px;
-      }
-      input[type="number"] {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        margin-bottom: 10px;
-      }
-      button {
-        background-color: #4caf50;
-        color: #fff;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #3e8e41;
-      }
-      input[type="number"][readonly] {
-        background-color: #f4f4f4;
-      }
-    </style>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <div class="container">
-      <h1>Profit Calculator</h1>
-      <label for="cp">Cost Price:</label>
-      <input type="number" id="cp" placeholder="Enter cost price">
-      <label for="profit">Profit:</label>
-      <input type="number" id="profit" placeholder="Enter profit">
-      <label for="sellprice">Selling Price:</label>
-      <input type="number" id="sellprice" placeholder="Selling price" readonly>
-      <label for="fees">Stripe Fees:</label>
-      <input type="number" id="fees" placeholder="Stripe fees" readonly>
-      <button onclick="calculate()">Calculate</button>
-    </div>
-    <script>
-      // JavaScript function to calculate profit or loss
-      function calculate() {
-        var cp = document.getElementById("cp").value;
-        var profit = document.getElementById("profit").value;
-        var sellingPrice = parseFloat(cp) + parseFloat(profit);
-        var stripeFee = (sellingPrice * 0.029) + 0.3;
-        var totalSellingPrice = sellingPrice + stripeFee;
-        document.getElementById("sellprice").value = totalSellingPrice.toFixed(2);
-        document.getElementById("fees").value = stripeFee.toFixed(2);
-      }
-    </script>
+    <h1>Home Page</h1>
+    <ul>
+      <li><a href="./calculator.html">Payment Calculator</a></li>
+      <li><a href="./components/game/game.html">Game</a></li>
+    </ul>
+    <script src="script.js"></script>
   </body>
 </html>
